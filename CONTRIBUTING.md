@@ -1,5 +1,3 @@
-# Data Structures And Algorithms 
-
 # Contributions
 * All the codes should be modular.
 * Name of the file should be algorithm's name and first letter of file should be capital.
