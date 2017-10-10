@@ -27,7 +27,7 @@ class QueueArray:
         print ("<FIRST")
 
 if __name__ == "__main__":
-    # execute only if run as a script, small demostration of working, just run 'python3 QueueArray.py'
+    # execute only if run as a script, small demostration of working, just run 'python3 QueueArray.py' in a terminal
     queue = QueueArray()
     while True:
         print("What do you want to do?")
