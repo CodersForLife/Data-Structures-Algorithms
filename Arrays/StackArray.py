@@ -26,7 +26,7 @@ class StackArray:
         print("<TOP")
 
 if __name__ == "__main__":
-    # execute only if run as a script, small demostration of working, just run 'python3 StackArray.py'
+    # execute only if run as a script, small demostration of working, just run 'python3 StackArray.py in a terminal'
     stack = StackArray()
     while True:
         print("What do you want to do?")
