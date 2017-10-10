@@ -1,6 +1,6 @@
-# Data Structures And Algorithms 
+# Data Structures And Algorithms
 
-# Contributions
+# Contribution Guidlines
 * All the codes should be modular.
 * Name of the file should be algorithm's name and first letter of file should be capital.
 * Code written should be readable.
