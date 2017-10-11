@@ -10,21 +10,21 @@ class QueueArray:
         return self.items == []
 
     def enqueue(self, item):
-        # We always enqueue into first position
-        self.items.insert(0,item)
+        # We always enqueue into last position
+        self.items.append(item)
 
     def dequeue(self):
-        # We always dequeue from last position
-        return self.items.pop()
+        # We always dequeue from first position
+        return self.items.pop(0)
 
     def size(self):
         return len(self.items)
 
     def printQueue(self):
-        print ("LAST>", end=" ")
+        print ("FIRST>", end=" ")
         for item in self.items:
             print(item, end=" ")
-        print ("<FIRST")
+        print ("<LAST")
 
 if __name__ == "__main__":
     # execute only if run as a script, small demostration of working, just run 'python3 QueueArray.py' in a terminal
