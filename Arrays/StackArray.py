@@ -10,12 +10,16 @@ class StackArray:
         return self.items == []
 
     def push(self, item):
-        # We always into first position
-        self.items.insert(self.size(),item)
+        # We always into last position
+        self.items.append(item)
 
     def pop(self):
-        # We always dequeue from first position
-        return self.items.pop()
+        if not self.isEmpty():
+            # We always dequeue from last position
+            return self.items.pop()
+        else:
+            print("The stack is empty. Can't pop")
+            return None
 
     def size(self):
         return len(self.items)
