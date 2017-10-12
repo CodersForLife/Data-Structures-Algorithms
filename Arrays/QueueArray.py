@@ -14,8 +14,12 @@ class QueueArray:
         self.items.append(item)
 
     def dequeue(self):
-        # We always dequeue from first position
-        return self.items.pop(0)
+        if not self.isEmpty():
+            # We always dequeue from first position
+            return self.items.pop(0)
+        else:
+            print("The queue is empty. Can't dequeue.")
+            return None
 
     def size(self):
         return len(self.items)
