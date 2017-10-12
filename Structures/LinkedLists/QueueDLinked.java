@@ -41,7 +41,7 @@ public class QueueDLinked {
 
 	/**
 	 * Dequeue an element
-	 * @return Object elem dequeued
+	 * @return elem dequeued, null if queue is empty
 	 */
 	public Object dequeue() {
 		if (!isEmpty()) {
