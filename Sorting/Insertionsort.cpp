@@ -1,6 +1,5 @@
-//
-// Created by Tay on 10/11/17.
-//
+#include<bits/stdc++.h>
+using namespace std();
 
 void insertionSort(int table[], int size) {
     int key, j;
