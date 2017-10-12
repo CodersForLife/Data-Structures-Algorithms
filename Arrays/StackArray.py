@@ -10,12 +10,12 @@ class StackArray:
         return self.items == []
 
     def push(self, item):
-        # We always into last position
+        # We always push into last position
         self.items.append(item)
 
     def pop(self):
         if not self.isEmpty():
-            # We always dequeue from last position
+            # We always pop from last position
             return self.items.pop()
         else:
             print("The stack is empty. Can't pop")
