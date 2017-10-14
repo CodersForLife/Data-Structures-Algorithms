@@ -4,17 +4,16 @@
 using namespace std;
 
 int maxSubarraySum(const vector<int> &array) {
-  int maxSum = 0;
+  int maxSum = *array.begin();
 
   int sum = 0;
   for (vector<int>::const_iterator i = array.begin(); i != array.end(); ++i) {
     sum += *i;
+    maxSum = max(maxSum, sum);
 
     if (sum < 0) {
       sum = 0;
     }
-
-    maxSum = max(maxSum, sum);
   }
 
   return maxSum;
