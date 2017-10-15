@@ -1,6 +1,6 @@
-# Data Structures And Algorithms
+                                 # Data Structures And Algorithms
 
-## Please star the repository 
+                                   ## Please star the repository 
 
 # Contribution Guidlines
 * All the codes should be modular.
