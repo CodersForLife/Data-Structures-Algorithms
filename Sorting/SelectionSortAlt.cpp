@@ -20,17 +20,15 @@ void selection_sort(int *array, std::size_t size, std::function<bool(int, int)> 
 	{
 		// The element we want to swap
 		int preferred_index = current_index;
-		std::cout << "Preferred index : " << preferred_index << '\n';
 
 		for (std::size_t next_index = current_index + 1; next_index < size; ++next_index)
 		{
-			std::cout << "Next index : " << next_index << '\n';
+			
 
 			if (direction(array[preferred_index], array[next_index]))
 				preferred_index = next_index;
 		}
 		
-		std::cout << "Preferred index (2) : " << preferred_index << '\n';
 		std::swap(array[current_index], array[preferred_index]);
 		
 	}
