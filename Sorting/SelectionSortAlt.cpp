@@ -23,8 +23,6 @@ void selection_sort(int *array, std::size_t size, std::function<bool(int, int)> 
 
 		for (std::size_t next_index = current_index + 1; next_index < size; ++next_index)
 		{
-			
-
 			if (direction(array[preferred_index], array[next_index]))
 				preferred_index = next_index;
 		}
