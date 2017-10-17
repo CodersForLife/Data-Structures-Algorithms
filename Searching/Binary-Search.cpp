@@ -13,7 +13,7 @@ int binarySearch(int *arr,int low,int high,int x){
 
 int main(){
 	int n; // number of elemmets of array
-	cin>>n;
+	scanf("%d",&n);
 	int a[n+1];
 	for(int i=0;i<n;i++){
 		cin>>a[i];
