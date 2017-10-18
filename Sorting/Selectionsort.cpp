@@ -1,31 +1,58 @@
-//
-// Created by Tay on 10/10/17.
-//
+/*author: Tanvi2698
+date: 15/10/2017*/
 
-void selectionSort(int table[], int size) {
-    int min, tmp;
-    for (int i = 0; i < size - 1; i++) {
-        min = i;
-        for (int j = i + 1; j < size; j++) {
-            if (table[j] < table[min]) {
-                min = j;
+#include<iostream>
+using namespace std;
+#define MAX 6                   //defining MAX as 6
+
+void selectionSort(int numbers[]);      //declaration of function selection sort
+void swapping(int*, int*);                  //declaration of swap function
+int main()
+{
+    int counter;
+    int numbers[MAX];   //creation of array
+
+    cout<<"Enter elements for array"<<endl;
+    for(counter=0;counter<MAX;counter++)       //input of numbers
+    {
+        cin>>numbers[counter];
+    }
+    cout<<"Displaying input array"<<endl;
+    for(counter=0;counter<MAX;counter++)      //display of array
+    {
+        cout<<numbers[counter]<<endl;
+    }
+    cout<<"performing selection sort";
+    selectionSort(numbers);              //call by reference selectionSort function,
+    for(counter=0;counter<MAX;counter++)        //displaying sorted array
+    {
+        cout<<numbers[counter]<<endl;
+    }
+        return 0;
+}
+
+void selectionSort(int numbers[])               //definition of selectionSort function
+{
+    int count1,count2;                          //declaration of counters for loops
+    int minimum;
+    for(count1=0;count1<MAX;count1++)
+    {
+        minimum=count1;                         //selecting minimum index
+        for(count2=count1+1;count2<=MAX;count2++)
+        {
+            if(numbers[count2]<numbers[minimum])
+            {
+                minimum=count2;                 //updating minimum index if the new number is smaller
             }
         }
-        if (min != i) {
-            tmp = table[i];
-            table[i] = table[min];
-            table[min] = tmp;
-        }
-        for (int a = 0; a < 7; a++) {
-            std::cout << table[a] << " ";
-
-        }
-        std::cout << std::endl;
+        swapping(&numbers[count1], &numbers[minimum]);      //swapping the minimum number and the current index
     }
 }
 
-int main() {
-    int table[] = {13, 32, 43, 14, 25};
-    selectionSort(table, 5);
-    return 0;
+void swapping(int *number1,int *number2)        //definition of swap function
+{
+   int temp;
+   temp=*number1;
+   *number1=*number2;
+   *number2=temp;
 }
