@@ -1,4 +1,19 @@
-Fixes #[Add issue number here."First steps for issues #IssueNumber]
+### Submission Checklist
+<!-- Go over all points below, and after creating the PR, tick all the checkboxes that apply. -->
+<!-- All points should be verified, otherwise, read the CONTRIBUTING.md guidelines -->
 
-Language: [Add here in what language you have implemented this data structure or algorithm.]
+- [ ] Your pull request targets the `master` branch of the repository.
+- [ ] You have only one commit (if not, [squash](http://forum.freecodecamp.org/t/how-to-squash-multiple-commits-into-one-with-git/13231) them into one commit).
+- [ ] You have read the [Contributing guidelines](https://github.com/CodersForLife/Data-Structures-Algorithms/blob/master/CONTRIBUTING.md) and your changes follow them.
 
+#### Type of Change
+<!-- What type of change does your code introduce? -->
+- [ ] Bug fix
+- [ ] New implementation
+
+### PR Description
+<!-- Describe your changes in detail, if applicable. -->
+
+
+
+Issue #[Add issue number here.]
