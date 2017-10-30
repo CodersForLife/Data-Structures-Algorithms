@@ -1,8 +1,4 @@
-#include <iostream>
-#include <cstdio>
-#include <vector>
-#include <iostream>
-#include <climits>
+#include<bits/stdc++.h> //A better library to include in this case as all the other libraries are part of it
 
 using namespace std; //Not the best tactic, used for cleaner code and better understanding
 
