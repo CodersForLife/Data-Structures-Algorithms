@@ -1,24 +1,34 @@
-#include<bits/stdc++.h>
-using namespace std;
-
-void bubbleSort(int a[], int s) {
-    for (int i = 1; i < s; i++) {
-        bool swapped = false;
-
-        for (int j = 0; j < s - i; j++) {
-            if (a[j] > a[j + 1]) {
-                std::swap(a[j], a[j + 1]);
-                swapped = true;
-            }
-        }
-
-        if (!swapped) {
-            return;
-        }
+#include <stdio.h>
+ 
+int main()
+{
+  int array[100], n, c, d, swap;
+ 
+  printf("Enter number of elements\n");
+  scanf("%d", &n);
+ 
+  printf("Enter %d integers\n", n);
+ 
+  for (c = 0; c < n; c++)
+    scanf("%d", &array[c]);
+ 
+  for (c = 0 ; c < ( n - 1 ); c++)
+  {
+    for (d = 0 ; d < n - c - 1; d++)
+    {
+      if (array[d] > array[d+1]) /* For decreasing order use < */
+      {
+        swap       = array[d];
+        array[d]   = array[d+1];
+        array[d+1] = swap;
+      }
     }
-}
-
-void main(){
-	int a[]={13,32,43,14,25};
-	bubbleSort(a,5);
+  }
+ 
+  printf("Sorted list in ascending order:\n");
+ 
+  for ( c = 0 ; c < n ; c++ )
+     printf("%d\n", array[c]);
+ 
+  return 0;
 }
