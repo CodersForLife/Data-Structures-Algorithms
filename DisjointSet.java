@@ -3,13 +3,11 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
  
-class Graph
-{
+class Graph{
     int V, E;    // V-> no. of vertices & E->no.of edges
     Edge edge[]; // /collection of all edges
  
-    class Edge
-    {
+    class Edge{
         int src, dest;
     };
  
