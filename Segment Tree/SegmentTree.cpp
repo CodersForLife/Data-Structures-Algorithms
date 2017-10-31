@@ -106,3 +106,4 @@ int update(int x,int tree[],int start,int end,int a[],int idx,int val)
     }
 return 0;    
 }
+//okk
