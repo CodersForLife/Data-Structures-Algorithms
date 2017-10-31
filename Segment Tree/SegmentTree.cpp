@@ -1,3 +1,4 @@
+//ok
 #include <bits/stdc++.h>
 using namespace std;
 int query(int x,int tree[],int start,int end,int a[],int l, int r);

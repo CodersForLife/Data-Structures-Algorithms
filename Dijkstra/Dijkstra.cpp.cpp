@@ -1,3 +1,4 @@
+//ok
 #include <cmath>
 #include <cstdio>
 #include <vector>
