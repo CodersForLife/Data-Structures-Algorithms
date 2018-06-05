@@ -215,15 +215,15 @@ void AVLTree::Print()
 	AVLNode* walker = root;
 	stack<AVLNode*> s;
 
-	while (s.empty())
+	while (s.empty()) 
 	{
 		while (walker)
 		{
-			s.push(walker);
+			s.push(walker); //push walker in stack
 			walker = walker->getLeft();
 		}
-		if (s.empty()) return;
-		walker = s.top();
+		if (s.empty()) return; //if empty return
+		walker = s.top(); //get stack's top
 		cout << walker->getdata() << " ";
 		s.pop();
 		walker = walker->getRight();
