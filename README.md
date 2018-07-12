@@ -1,5 +1,6 @@
-# Data Structures And Algorithms
+                                 # Data Structures And Algorithms
 
+                                   ## Please star the repository 
 ### Please star the repository
 
 ## Contributing
