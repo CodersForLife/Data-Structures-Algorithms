@@ -1,72 +1,72 @@
-#include<bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
 
-void radixSort(int *arr, int &no_of_elmnts){
-	int min = INT_MAX;
-	int max = INT_MIN;
-
-	for(int i=0;i<no_of_elmnts;i++){
-		if(arr[i]>max){
+// Get maximum value from array.
+int getMax(int arr[], int n)
+{
+	int max = arr[0];
+	for (int i = 1; i < n; i++)
+		if (arr[i] > max)
 			max = arr[i];
-			continue;
-		}
-		if(arr[i]<min){
-			min=arr[i];
-		}
-	}
-
-	if(min<0){
-		for(int i=0;i<no_of_elmnts;i++){
-			arr[i]+=abs(min);
-		}
-		max+=abs(min);
-	}
-
-	int rounds=0;
-	while(max){
-		rounds++;
-		max/=10;
-	}
-
-	vector< list<int> > buckets;
-	int place_value=1;
-	for(int i=0;i<rounds;i++){
-		buckets.clear();
-		buckets.resize(10);
-		
-		for(int j=0;j<no_of_elmnts;j++){
-			buckets[ (arr[j]/place_value) % 10 ].push_back(arr[j]);
-		}
-
-		int arr_index=0;
-		for(int j=0;j<10;j++){
-			list<int>::iterator it;
-			for(it=buckets[j].begin(); it!=buckets[j].end();it++){
-				arr[arr_index++]=*it;
-			}
-		}
-		place_value*=10;
-	}
-
-	if(min<0){
-		for(int i=0;i<no_of_elmnts;i++){
-			arr[i]+=min;
-		}
-	}
+	return max;
 }
-int main(){
-	// freopen("input.txt", "rd", stdin);
-	
-	int no_of_elmnts;
-	cin>>no_of_elmnts;
 
-	int *arr = new int[no_of_elmnts];
+// Count sort of arr[].
+void countSort(int arr[], int n, int exp)
+{
+	// Count[i] array will be counting the number of array values having that 'i' digit at their (exp)th place.
+	int output[n], i, count[10] = {0};
 
-	for(int i=0;i<no_of_elmnts;i++){
+	// Count the number of times each digit occurred at (exp)th place in every input.
+	for (i = 0; i < n; i++)
+		count[(arr[i] / exp) % 10]++;
+
+	// Calculating their cumulative count.
+	for (i = 1; i < 10; i++)
+		count[i] += count[i-1];
+
+	// Inserting values according to the digit '(arr[i] / exp) % 10' fetched into count[(arr[i] / exp) % 10].
+	for (i = n - 1; i >= 0; i--)
+	{
+		output[count[(arr[i] / exp) % 10] - 1] = arr[i];
+		count[(arr[i] / exp) % 10]--;
+	}
+
+	// Assigning the result to the arr pointer of main().
+	for (i = 0; i < n; i++)
+		arr[i] = output[i];
+}
+
+// Sort arr[] of size n using Radix Sort.
+void radixsort(int arr[], int n)
+{
+	int exp, m;
+	m = getMax(arr, n);
+
+	// Calling countSort() for digit at (exp)th place in every input.
+	for (exp = 1; m/exp > 0; exp *= 10)
+		countSort(arr, n, exp);
+}
+
+int main()
+{
+	int n, i;
+	cout<<"\nEnter the number of data element to be sorted: ";
+	cin>>n;
+
+	int arr[n];
+	for(i = 0; i < n; i++)
+	{
+		cout<<"Enter element "<<i+1<<": ";
 		cin>>arr[i];
 	}
-	radixSort(arr, no_of_elmnts);
 
+	radixsort(arr, n);
+
+	// Printing the sorted data.
+	cout<<"\nSorted Data ";
+	for (i = 0; i < n; i++)
+		cout<<arr[i]<<" ";
 	return 0;
 }
