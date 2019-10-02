@@ -21,9 +21,11 @@ int maxSubarraySum(const vector<int> &array) {
 
 int main() {
   vector<int> array;
-
+  int arraySize;
   int number;
-  while (cin >> number) {
+  cin>>arraySize;
+  while (arraySize--) {
+    cin >> number;
     array.push_back(number);
   }
 
