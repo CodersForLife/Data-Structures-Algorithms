@@ -2,21 +2,21 @@
  
 using namespace std;
  
-int addtwo(int a,int b)
+int addtwo(int Number1,int Number2)
 {
-    int s,c;
-    if (b == 0)
-        return a;
+    int sum ,carry;
+    if (Number2 == 0)
+        return Number1;
     else
-        s = a^b;
-        c = (a&b) << 1;
-    return addtwo(s,c);
+        sum = Number1^Number2;
+        carry = (Number1&Number2) << 1;
+    return addtwo(sum ,carry);
 }
  
 int main()
 {
-    int a,b;
-    cin>>a>>b;
-    cout<<addtwo(a,b)<<endl;
+    int Number1,Number2;
+    cin>>Number1>>Number2;
+    cout<<addtwo(Number1,Number2)<<endl;
     return 0;
 }
