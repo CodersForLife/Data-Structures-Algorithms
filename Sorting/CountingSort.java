@@ -7,15 +7,16 @@ class CountingSort
         int n = array.length; 
   
         int output[] = new int[n]; 
-  
-        int count[] = new int[256]; 
-        for (int i=0; i<256; ++i) 
+        
+        //count array size depends on your maximum element of array
+        int count[] = new int[100]; 
+        for (int i=0; i<100; ++i) 
             count[i] = 0; 
   
         for (int i=0; i<n; ++i) 
             ++count[array[i]]; 
   
-        for (int i=1; i<=255; ++i) 
+        for (int i=1; i<=99; ++i) 
             count[i] += count[i-1]; 
 
         //Reverse order to make it Stable 
