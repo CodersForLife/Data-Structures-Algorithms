@@ -24,3 +24,4 @@ See the list of [contributors](https://github.com/CodersForLife/Data-Structures-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+<b>happy coding<b>
