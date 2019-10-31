@@ -16,6 +16,8 @@ public class BubbleSort {
 	}
 
 	public static void main(String[] args) {
+		//for user convenience
+		System.out.print(" enter the number");
 		Scanner s = new Scanner(System.in);
 		int size = s.nextInt();
 		int arr[] = new int[size];
@@ -26,7 +28,7 @@ public class BubbleSort {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}
-		s.close();
+		s.close(); //closing the resources is good practice.
 	}
 
 }
