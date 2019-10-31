@@ -37,6 +37,7 @@ public class BinarySearch {
 			System.out.println("The position of number in array is : "
 					+ position);
 		}
+		//to check Time complexity of the Search.
 		System.out.println("for time complexity of binary search "+Math.log(size) / Math.log(2));
 		s.close();
 	}
