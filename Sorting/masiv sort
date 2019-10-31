@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) {
+	float B[4], C[12]={4.8,3.5,0.25,-3.2,1.6,0.8,-7.2,1.25,0.3,-1.3,8.4,-1.32}, c;
+	int count=2, count2=0;
+	while(count<12) {
+		B[count2]=C[count];
+		count2++;
+		count+=3;
+	}
+	c=B[0];
+	count=0;
+	count2=0;
+	for(count=0; count2<4; count2++) {
+		while(count<3) {
+	  		if(B[count]<B[(count+1)]) {
+	  			c=B[count];
+	  			B[count]=B[count+1];
+	  			B[count+1]=c;
+	  		}
+		count++;	
+		}
+	}	
+	for(count=0; count<4; count++) {
+		printf(" %.2f \n", B[count]);
+	}
+	return 0;
+}
