@@ -5,10 +5,12 @@ public class BinarySearch {
 
 	public static int binarySearch(int arr[], int num, int startIndex,
 			int endIndex) {
+				   
 		if (startIndex > endIndex) {
 			return -1;
 		}
 		int mid = startIndex + (endIndex - startIndex) / 2;
+
 		if (num == arr[mid]) {
 			return mid;
 		} else if (num > arr[mid]) {
@@ -16,9 +18,11 @@ public class BinarySearch {
 		} else {
 			return binarySearch(arr, num, startIndex, mid - 1);
 		}
+          
 	}
 
 	public static void main(String[] args) {
+	
 		Scanner s = new Scanner(System.in);
 		int size = s.nextInt();
 		int[] arr = new int[size];
@@ -33,6 +37,7 @@ public class BinarySearch {
 			System.out.println("The position of number in array is : "
 					+ position);
 		}
+		System.out.println("for time complexity of binary search "+Math.log(size) / Math.log(2));
 		s.close();
 	}
 
