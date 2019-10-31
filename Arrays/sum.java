@@ -34,6 +34,8 @@ public class sum {
     }
     
     public static void main(String args[] ) throws Exception {
+        //for user inputs
+        System.out.println("please enter the no.s")
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         for(int i=0; i<t ; i++) {
