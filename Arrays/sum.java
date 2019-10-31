@@ -5,8 +5,7 @@ public class sum {
     static void printMaxSum(int[] arr){
 
     //1) For max continuous sub array
-    int max_ending_here = 0;
-    int max_so_far = Integer.MIN_VALUE;
+    int max_ending_here = 0, max_so_far = Integer.MIN_VALUE;
     /*OR int max_so_far = arr[0];*/
 
     for(int x : arr){
@@ -34,7 +33,7 @@ public class sum {
     }
     
     public static void main(String args[] ) throws Exception {
-        //for user inputs
+        //for user inputs 
         System.out.println("please enter the no.s");
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
