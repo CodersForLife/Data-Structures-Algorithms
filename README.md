@@ -13,9 +13,9 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our coding guideli
 * Name of the file should be algorithm's name and first letter of file should be capital.
 * Code written should be readable.
 * Variable names should be logical and understandable.
-  Like int x; //This is not allowed
+  Like int x; ( //This is not allowed )
 * Same algorithm can be submitted in different languages.
-* Please Fix only one issue in one pull request
+* Please Fix only one issue in one pull request.
 
 ## Authors
 
